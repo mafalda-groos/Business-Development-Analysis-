@@ -1,0 +1,98 @@
+{
+  "agency": {
+    "name": "L&Co",
+    "retainer_min_monthly": 15000,
+    "retainer_max_monthly": 20000
+  },
+
+  "scoring_weights": {
+    "location": 0.25,
+    "financial_fit": 0.25,
+    "partnership_signal": 0.30,
+    "recency_trigger": 0.20
+  },
+
+  "financial_thresholds": {
+    "tier_1_min_revenue_millions": 500,
+    "tier_1_max_revenue_millions": 1000,
+    "tier_1_points": 15,
+    "tier_2_min_revenue_millions": 1000,
+    "tier_2_points": 25
+  },
+
+  "geographic_exclusions": {
+    "excluded_cities": ["New York", "NYC", "Los Angeles", "LA", "London"],
+    "excluded_states": [],
+    "excluded_countries": [],
+    "preferred_hubs": [
+      "Minneapolis", "Seattle", "Cincinnati", "Austin", "Chicago",
+      "Denver", "Atlanta", "Dallas", "Detroit", "Pittsburgh",
+      "St. Louis", "Kansas City", "Columbus", "Portland", "Nashville",
+      "Phoenix", "Salt Lake City", "Indianapolis", "Milwaukee", "Charlotte"
+    ]
+  },
+
+  "partnership_keywords": [
+    "LTO", "limited time offer", "capsule collection", "brand partnership",
+    "co-branding", "collab", "collaboration", "cultural marketing",
+    "artist partnership", "designer collaboration", "fashion collaboration",
+    "limited edition", "exclusive drop", "brand activation",
+    "experiential marketing", "co-creation", "creative partnership",
+    "brand licensing", "pop-up", "special edition"
+  ],
+
+  "leadership_change_keywords": [
+    "CMO", "Chief Marketing Officer", "Head of Brand", "VP of Partnerships",
+    "VP of Brand", "Chief Brand Officer", "Head of Global Partnerships",
+    "VP of Marketing", "Head of Creative", "Creative Director",
+    "Head of Collaborations", "Director of Brand Partnerships",
+    "newly appointed", "joins as", "named as", "hired as", "promoted to"
+  ],
+
+  "growth_signal_keywords": [
+    "expansion", "new demographic", "increased marketing spend",
+    "brand refresh", "rebranding", "product line expansion",
+    "new market", "growth mode", "record revenue", "Q4 growth",
+    "strategic pivot", "cultural relevance", "reaching Gen Z",
+    "reaching millennials", "lifestyle brand", "DTC expansion"
+  ],
+
+  "target_personas": [
+    "Head of Global Partnerships",
+    "VP of Brand Collaboration",
+    "Creative Director of LTOs",
+    "Director of Brand Partnerships",
+    "VP of Marketing Partnerships",
+    "Chief Marketing Officer",
+    "Head of Brand Experience",
+    "VP of Cultural Marketing",
+    "Director of Creative Collaborations",
+    "Head of Design Partnerships"
+  ],
+
+  "rss_feeds": [
+    "https://feeds.feedburner.com/entrepreneur/latest",
+    "https://www.businesswire.com/rss/home/?rss=G1",
+    "https://feeds.reuters.com/reuters/businessNews",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml",
+    "https://www.prnewswire.com/rss/news-releases-list.rss",
+    "https://feeds.feedburner.com/fastcompany/headlines",
+    "https://www.adweek.com/feed/",
+    "https://www.marketingweek.com/feed/",
+    "https://hypebeast.com/feed"
+  ],
+
+  "pipeline": {
+    "lookback_days": 7,
+    "min_score_tier1": 80,
+    "min_score_tier2": 60,
+    "max_results_per_run": 50
+  },
+
+  "output": {
+    "reports_dir": "reports",
+    "data_dir": "data",
+    "format": ["markdown", "csv", "json"]
+  }
+}

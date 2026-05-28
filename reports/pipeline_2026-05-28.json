@@ -1,0 +1,580 @@
+{
+  "run_date": "2026-05-28T19:37:52.741960+00:00",
+  "leads": [
+    {
+      "company": "Target Corporation",
+      "hq": "Minneapolis, MN",
+      "revenue": "$109.0B",
+      "industry": "Retail",
+      "score": 100.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 20.0,
+        "total": 100.0
+      },
+      "why_now": "\"Target Names New Chief Brand Officer, Eyes Expanded LTO Design Partnerships\" (Retail Dive) | Key signals: new leadership appointment in brand/marketing; growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (Missoni, Lilly Pulitzer).",
+      "target_persona": "VP of Brand Collaboration",
+      "known_partnerships": [
+        "Missoni",
+        "Lilly Pulitzer",
+        "Alexander McQueen",
+        "Hunter",
+        "Marimekko"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Target Names New Chief Brand Officer, Eyes Expanded LTO Design Partnerships",
+          "url": "https://example-news.com/target-cbo-appointment",
+          "source": "Retail Dive",
+          "published": "2026-05-26T19:37:52.729528+00:00"
+        },
+        {
+          "title": "Tractor Supply Co. Sees 22% YoY Growth, Eyes 'Rural Lifestyle Brand' Collaborations",
+          "url": "https://example-news.com/tractor-supply-rural-lifestyle-brand",
+          "source": "CNBC",
+          "published": "2026-05-24T19:37:52.729609+00:00"
+        }
+      ],
+      "website": "https://www.target.com",
+      "stock_ticker": "TGT"
+    },
+    {
+      "company": "REI Co-op",
+      "hq": "Seattle, WA",
+      "revenue": "$3.7B",
+      "industry": "Outdoor Retail",
+      "score": 100.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 20.0,
+        "total": 100.0
+      },
+      "why_now": "\"REI Appoints New Head of Creative Partnerships, Signals Brand Collaboration Push\" (Outdoor Retailer News) | Key signals: new leadership appointment in brand/marketing; growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (Patagonia, Arc'teryx).",
+      "target_persona": "VP of Brand Collaboration",
+      "known_partnerships": [
+        "Patagonia",
+        "Arc'teryx",
+        "various brand activations"
+      ],
+      "triggering_articles": [
+        {
+          "title": "REI Appoints New Head of Creative Partnerships, Signals Brand Collaboration Push",
+          "url": "https://example-news.com/rei-head-creative-partnerships",
+          "source": "Outdoor Retailer News",
+          "published": "2026-05-24T19:37:52.729599+00:00"
+        }
+      ],
+      "website": "https://www.rei.com",
+      "stock_ticker": ""
+    },
+    {
+      "company": "Nordstrom",
+      "hq": "Seattle, WA",
+      "revenue": "$14.8B",
+      "industry": "Fashion Retail",
+      "score": 100.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 20.0,
+        "total": 100.0
+      },
+      "why_now": "\"Nordstrom Hires VP of Brand Collaboration from LVMH's North America Division\" (WWD) | Key signals: new leadership appointment in brand/marketing; active partnership or LTO program; proven collaboration track record (Opening Ceremony, Madewell).",
+      "target_persona": "VP of Brand Collaboration",
+      "known_partnerships": [
+        "Opening Ceremony",
+        "Madewell",
+        "various designer LTOs"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Nordstrom Hires VP of Brand Collaboration from LVMH's North America Division",
+          "url": "https://example-news.com/nordstrom-vp-brand-collab",
+          "source": "WWD",
+          "published": "2026-05-27T19:37:52.729596+00:00"
+        }
+      ],
+      "website": "https://www.nordstrom.com",
+      "stock_ticker": "JWN"
+    },
+    {
+      "company": "General Mills",
+      "hq": "Minneapolis, MN",
+      "revenue": "$19.9B",
+      "industry": "Food & Beverage",
+      "score": 95.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 15.0,
+        "total": 95.0
+      },
+      "why_now": "\"General Mills Launches 'Taste the Art' Initiative \u2014 Designer Packaging LTO Program\" (Ad Age) | Key signals: growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (various limited-edition artist packaging campaigns).",
+      "target_persona": "VP of Brand Collaboration / Creative Director of LTOs",
+      "known_partnerships": [
+        "various limited-edition artist packaging campaigns"
+      ],
+      "triggering_articles": [
+        {
+          "title": "General Mills Launches 'Taste the Art' Initiative \u2014 Designer Packaging LTO Program",
+          "url": "https://example-news.com/general-mills-taste-the-art",
+          "source": "Ad Age",
+          "published": "2026-05-23T19:37:52.729598+00:00"
+        }
+      ],
+      "website": "https://www.generalmills.com",
+      "stock_ticker": "GIS"
+    },
+    {
+      "company": "Starbucks",
+      "hq": "Seattle, WA",
+      "revenue": "$36.2B",
+      "industry": "Food & Beverage / Hospitality",
+      "score": 90.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 10.0,
+        "total": 90.0
+      },
+      "why_now": "\"Starbucks Q2 Earnings: CEO Signals 'Cultural Partnership Renaissance' in Strategy Refresh\" (Bloomberg) | Key signals: active partnership or LTO program; proven collaboration track record (Stanley, Spotify).",
+      "target_persona": "VP of Brand Collaboration / Creative Director of LTOs",
+      "known_partnerships": [
+        "Stanley",
+        "Spotify",
+        "various artist cup designs"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Starbucks Q2 Earnings: CEO Signals 'Cultural Partnership Renaissance' in Strategy Refresh",
+          "url": "https://example-news.com/starbucks-q2-cultural-partnerships",
+          "source": "Bloomberg",
+          "published": "2026-05-25T19:37:52.729593+00:00"
+        }
+      ],
+      "website": "https://www.starbucks.com",
+      "stock_ticker": "SBUX"
+    },
+    {
+      "company": "Tractor Supply Co.",
+      "hq": "Brentwood, TN",
+      "revenue": "$14.6B",
+      "industry": "Farm & Ranch Retail",
+      "score": 85.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 15.0,
+        "total": 85.0
+      },
+      "why_now": "\"Tractor Supply Co. Sees 22% YoY Growth, Eyes 'Rural Lifestyle Brand' Collaborations\" (CNBC) | Key signals: growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (various country music brand activations).",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [
+        "various country music brand activations"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Tractor Supply Co. Sees 22% YoY Growth, Eyes 'Rural Lifestyle Brand' Collaborations",
+          "url": "https://example-news.com/tractor-supply-rural-lifestyle-brand",
+          "source": "CNBC",
+          "published": "2026-05-24T19:37:52.729609+00:00"
+        }
+      ],
+      "website": "https://www.tractorsupply.com",
+      "stock_ticker": "TSCO"
+    },
+    {
+      "company": "H-E-B Grocery",
+      "hq": "San Antonio, TX",
+      "revenue": "$38.0B",
+      "industry": "Grocery Retail",
+      "score": 85.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 15.0,
+        "total": 85.0
+      },
+      "why_now": "\"H-E-B Announces Record Revenue and Expands Into Brand Lifestyle Strategy\" (Austin American-Statesman) | Key signals: growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (various Texas artist collaborations).",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [
+        "various Texas artist collaborations"
+      ],
+      "triggering_articles": [
+        {
+          "title": "H-E-B Announces Record Revenue and Expands Into Brand Lifestyle Strategy",
+          "url": "https://example-news.com/heb-record-revenue-lifestyle",
+          "source": "Austin American-Statesman",
+          "published": "2026-05-25T19:37:52.729602+00:00"
+        },
+        {
+          "title": "Kroger Investor Day: 'Premium Private Label' Expansion to Include Designer Collaborations",
+          "url": "https://example-news.com/kroger-investor-day-premium-private-label",
+          "source": "Grocery Dive",
+          "published": "2026-05-21T19:37:52.729606+00:00"
+        }
+      ],
+      "website": "https://www.heb.com",
+      "stock_ticker": ""
+    },
+    {
+      "company": "Lululemon",
+      "hq": "Vancouver, BC",
+      "revenue": "$9.6B",
+      "industry": "Activewear / Lifestyle Retail",
+      "score": 80.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 10.0,
+        "total": 80.0
+      },
+      "why_now": "\"Lululemon Names New VP of Cultural Marketing, Plans Global Collab Campaign\" (Retail Brew) | Key signals: active partnership or LTO program; proven collaboration track record (various local artist programs, Team Canada).",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [
+        "various local artist programs",
+        "Team Canada"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Lululemon Names New VP of Cultural Marketing, Plans Global Collab Campaign",
+          "url": "https://example-news.com/lululemon-vp-cultural-marketing",
+          "source": "Retail Brew",
+          "published": "2026-05-26T19:37:52.729604+00:00"
+        }
+      ],
+      "website": "https://www.lululemon.com",
+      "stock_ticker": "LULU"
+    },
+    {
+      "company": "Kroger",
+      "hq": "Cincinnati, OH",
+      "revenue": "$148.3B",
+      "industry": "Grocery Retail",
+      "score": 80.0,
+      "tier": "Tier 1",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 0.0,
+        "total": 80.0
+      },
+      "why_now": "\"Kroger Investor Day: 'Premium Private Label' Expansion to Include Designer Collaborations\" (Grocery Dive) | Key signals: growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (various exclusive private-label lines).",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [
+        "various exclusive private-label lines"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Kroger Investor Day: 'Premium Private Label' Expansion to Include Designer Collaborations",
+          "url": "https://example-news.com/kroger-investor-day-premium-private-label",
+          "source": "Grocery Dive",
+          "published": "2026-05-21T19:37:52.729606+00:00"
+        }
+      ],
+      "website": "https://www.kroger.com",
+      "stock_ticker": "KR"
+    },
+    {
+      "company": "3M",
+      "hq": "St. Paul, MN",
+      "revenue": "$33.5B",
+      "industry": "Industrial / Consumer Products",
+      "score": 75.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 15.0,
+        "recency_trigger": 20.0,
+        "total": 75.0
+      },
+      "why_now": "\"3M's Consumer Division Hires CMO with Luxury Brand Background\" (Marketing Week) | Key signals: new leadership appointment in brand/marketing; active partnership or LTO program.",
+      "target_persona": "VP of Brand Collaboration",
+      "known_partnerships": [],
+      "triggering_articles": [
+        {
+          "title": "3M's Consumer Division Hires CMO with Luxury Brand Background",
+          "url": "https://example-news.com/3m-cmo-luxury-background",
+          "source": "Marketing Week",
+          "published": "2026-05-23T19:37:52.729607+00:00"
+        }
+      ],
+      "website": "https://www.3m.com",
+      "stock_ticker": "MMM"
+    },
+    {
+      "company": "Delta Air Lines",
+      "hq": "Atlanta, GA",
+      "revenue": "$55.7B",
+      "industry": "Aviation",
+      "score": 75.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 0.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 30.0,
+        "recency_trigger": 20.0,
+        "total": 75.0
+      },
+      "why_now": "\"Delta Unveils 'Delta x Design' Program \u2014 Co-Branded Collaborations with Artists and Designers\" (Fast Company) | Key signals: new leadership appointment in brand/marketing; growth mode / strategic expansion signal; active partnership or LTO program; proven collaboration track record (Porsche, various lifestyle brand tie-ins).",
+      "target_persona": "VP of Brand Collaboration",
+      "known_partnerships": [
+        "Porsche",
+        "various lifestyle brand tie-ins"
+      ],
+      "triggering_articles": [
+        {
+          "title": "Delta Unveils 'Delta x Design' Program \u2014 Co-Branded Collaborations with Artists and Designers",
+          "url": "https://example-news.com/delta-x-design-launch",
+          "source": "Fast Company",
+          "published": "2026-05-22T19:37:52.729601+00:00"
+        }
+      ],
+      "website": "https://www.delta.com",
+      "stock_ticker": "DAL"
+    },
+    {
+      "company": "Procter & Gamble",
+      "hq": "Cincinnati, OH",
+      "revenue": "$82.0B",
+      "industry": "Consumer Packaged Goods",
+      "score": 70.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 20.0,
+        "recency_trigger": 0.0,
+        "total": 70.0
+      },
+      "why_now": "Key signals: active partnership or LTO program; proven collaboration track record (various sports and entertainment sponsorships).",
+      "target_persona": "VP of Brand Partnerships / Chief Marketing Officer",
+      "known_partnerships": [
+        "various sports and entertainment sponsorships"
+      ],
+      "triggering_articles": [],
+      "website": "https://www.pg.com",
+      "stock_ticker": "PG"
+    },
+    {
+      "company": "Alaska Airlines",
+      "hq": "Seattle, WA",
+      "revenue": "$9.9B",
+      "industry": "Aviation",
+      "score": 70.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 20.0,
+        "recency_trigger": 0.0,
+        "total": 70.0
+      },
+      "why_now": "Key signals: active partnership or LTO program; proven collaboration track record (Virgin America branding legacy, various artist livery programs).",
+      "target_persona": "VP of Marketing Partnerships / Head of Brand Experience",
+      "known_partnerships": [
+        "Virgin America branding legacy",
+        "various artist livery programs"
+      ],
+      "triggering_articles": [],
+      "website": "https://www.alaskaair.com",
+      "stock_ticker": "ALK"
+    },
+    {
+      "company": "Best Buy",
+      "hq": "Richfield, MN",
+      "revenue": "$43.5B",
+      "industry": "Consumer Electronics Retail",
+      "score": 60.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 20.0,
+        "recency_trigger": 0.0,
+        "total": 60.0
+      },
+      "why_now": "Key signals: active partnership or LTO program; proven collaboration track record (Apple, Samsung).",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [
+        "Apple",
+        "Samsung",
+        "various exclusive drops"
+      ],
+      "triggering_articles": [],
+      "website": "https://www.bestbuy.com",
+      "stock_ticker": "BBY"
+    },
+    {
+      "company": "Patagonia",
+      "hq": "Ventura, CA",
+      "revenue": "$1.5B",
+      "industry": "Outdoor Apparel",
+      "score": 60.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 20.0,
+        "recency_trigger": 0.0,
+        "total": 60.0
+      },
+      "why_now": "Key signals: active partnership or LTO program; proven collaboration track record (various environmental NGOs, film collaborations).",
+      "target_persona": "VP of Brand Collaboration / Creative Director",
+      "known_partnerships": [
+        "various environmental NGOs",
+        "film collaborations"
+      ],
+      "triggering_articles": [],
+      "website": "https://www.patagonia.com",
+      "stock_ticker": ""
+    },
+    {
+      "company": "Duluth Trading Company",
+      "hq": "Belleville, WI",
+      "revenue": "$660M",
+      "industry": "Workwear / Lifestyle Retail",
+      "score": 60.0,
+      "tier": "Tier 2",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 15.0,
+        "partnership_signal": 15.0,
+        "recency_trigger": 15.0,
+        "total": 60.0
+      },
+      "why_now": "\"H-E-B Announces Record Revenue and Expands Into Brand Lifestyle Strategy\" (Austin American-Statesman) | Key signals: growth mode / strategic expansion signal; active partnership or LTO program.",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [],
+      "triggering_articles": [
+        {
+          "title": "Starbucks Q2 Earnings: CEO Signals 'Cultural Partnership Renaissance' in Strategy Refresh",
+          "url": "https://example-news.com/starbucks-q2-cultural-partnerships",
+          "source": "Bloomberg",
+          "published": "2026-05-25T19:37:52.729593+00:00"
+        },
+        {
+          "title": "H-E-B Announces Record Revenue and Expands Into Brand Lifestyle Strategy",
+          "url": "https://example-news.com/heb-record-revenue-lifestyle",
+          "source": "Austin American-Statesman",
+          "published": "2026-05-25T19:37:52.729602+00:00"
+        }
+      ],
+      "website": "https://www.duluthtrading.com",
+      "stock_ticker": "DLTH"
+    },
+    {
+      "company": "Spotify",
+      "hq": "Stockholm, Sweden",
+      "revenue": "$14.0B",
+      "industry": "Music Streaming / Tech",
+      "score": 55.0,
+      "tier": "Watch List",
+      "score_breakdown": {
+        "location": 10.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 20.0,
+        "recency_trigger": 0.0,
+        "total": 55.0
+      },
+      "why_now": "Key signals: active partnership or LTO program; proven collaboration track record (Coca-Cola, Starbucks).",
+      "target_persona": "Head of Cultural Partnerships / VP of Brand Experience",
+      "known_partnerships": [
+        "Coca-Cola",
+        "Starbucks",
+        "various artist merch drops"
+      ],
+      "triggering_articles": [],
+      "website": "https://www.spotify.com",
+      "stock_ticker": "SPOT"
+    },
+    {
+      "company": "Cargill",
+      "hq": "Minneapolis, MN",
+      "revenue": "$165.0B",
+      "industry": "Agriculture / Food Processing",
+      "score": 50.0,
+      "tier": "Watch List",
+      "score_breakdown": {
+        "location": 25.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 0.0,
+        "recency_trigger": 0.0,
+        "total": 50.0
+      },
+      "why_now": "Company meets baseline financial and geographic criteria.",
+      "target_persona": "VP of Brand Collaboration / Creative Director of LTOs",
+      "known_partnerships": [],
+      "triggering_articles": [],
+      "website": "https://www.cargill.com",
+      "stock_ticker": ""
+    },
+    {
+      "company": "Camping World",
+      "hq": "Lincolnshire, IL",
+      "revenue": "$7.2B",
+      "industry": "Outdoor / RV Retail",
+      "score": 40.0,
+      "tier": "Watch List",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 0.0,
+        "recency_trigger": 0.0,
+        "total": 40.0
+      },
+      "why_now": "Company meets baseline financial and geographic criteria.",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [],
+      "triggering_articles": [],
+      "website": "https://www.campingworld.com",
+      "stock_ticker": "CWH"
+    },
+    {
+      "company": "Chewy",
+      "hq": "Dania Beach, FL",
+      "revenue": "$11.8B",
+      "industry": "Pet Retail / E-commerce",
+      "score": 40.0,
+      "tier": "Watch List",
+      "score_breakdown": {
+        "location": 15.0,
+        "financial_fit": 25.0,
+        "partnership_signal": 0.0,
+        "recency_trigger": 0.0,
+        "total": 40.0
+      },
+      "why_now": "Company meets baseline financial and geographic criteria.",
+      "target_persona": "Head of Global Partnerships / Design Partnership Team",
+      "known_partnerships": [],
+      "triggering_articles": [],
+      "website": "https://www.chewy.com",
+      "stock_ticker": "CHWY"
+    }
+  ],
+  "summary": {
+    "tier1_count": 9,
+    "tier2_count": 7,
+    "watch_count": 4
+  }
+}
