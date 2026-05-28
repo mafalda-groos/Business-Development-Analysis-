@@ -117,3 +117,34 @@ To connect Crunchbase or Clearbit for real revenue/funding data, replace the `MO
 crontab -e
 # Add:  0 7 * * 1 cd /path/to/repo && python pipeline.py
 ```
+
+---
+
+## Vercel Deployment
+
+The repo is configured to deploy to Vercel as a hybrid app:
+- **Static dashboard** — `index.html` at the root
+- **Serverless API** — `api/index.py` (Flask) handling `/api/leads`, `/api/run`, `/api/cron`, `/api/health`
+- **Weekly cron** — Vercel Cron hits `/api/cron` every Monday 14:00 UTC
+
+### File layout for Vercel
+```
+├── index.html         ← Static dashboard (served at /)
+├── api/index.py       ← Flask app, all API routes
+├── vercel.json        ← Function config, rewrites, cron schedule
+├── requirements.txt   ← Flask (Vercel auto-detects)
+├── config.json        ← Bundled with the function via includeFiles
+├── ingestion.py       ← Bundled
+├── scorer.py          ← Bundled
+└── report.py          ← Bundled
+```
+
+### Deploy
+1. Connect the repo to Vercel (Project → Import from GitHub)
+2. Use default build settings — no build step needed, no framework preset
+3. Deploy. The dashboard will be at your Vercel URL, API at `<url>/api/leads`
+
+### Notes on serverless mode
+- Reports are computed on-demand per request, not saved to disk (serverless = ephemeral filesystem)
+- To persist weekly reports, wire `/api/cron` to push to S3, Supabase, Postgres, or send via email/Slack
+- Live RSS mode (`?live=true` query param on `/api/run`) may hit Vercel's 10s function timeout on Hobby plan — use mock data or upgrade to Pro for 60s timeout
