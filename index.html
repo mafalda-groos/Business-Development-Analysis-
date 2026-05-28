@@ -4,197 +4,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L&amp;Co — Business Development Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:   #0a0a0a;
-      --white:   #fafafa;
-      --cream:   #f5f0e8;
-      --red:     #c0392b;
-      --amber:   #d4860a;
-      --green:   #27a155;
-      --mid:     #555;
-      --light:   #e8e2d8;
-      --card-bg: #ffffff;
-      --radius:  6px;
-      --font:    'Georgia', serif;
-      --mono:    'Courier New', monospace;
+      --ink:       #14171a;
+      --ink-2:     #3a4048;
+      --ink-mute:  #6a737d;
+      --line:      #e5e1d8;
+      --line-soft: #f1ede4;
+      --paper:     #f7f4ec;
+      --card:      #ffffff;
+      --accent:    #2d5a3d;
+      --warm:      #b8732a;
+      --cool:      #8a8780;
+      --radius-lg: 14px;
+      --radius:    8px;
+      --shadow-sm: 0 1px 2px rgba(20,23,26,0.04), 0 1px 1px rgba(20,23,26,0.02);
+      --shadow:    0 4px 16px rgba(20,23,26,0.06), 0 1px 3px rgba(20,23,26,0.04);
+      --sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --serif:     'Fraunces', Georgia, serif;
     }
 
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     body {
-      font-family: var(--font);
-      background: var(--cream);
-      color: var(--black);
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
       min-height: 100vh;
+      font-size: 15px;
+      line-height: 1.5;
     }
+    a { color: inherit; }
 
-    header {
-      background: var(--black);
-      color: var(--white);
-      padding: 28px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 3px solid #222;
+    .topbar {
+      background: var(--ink);
+      color: #f6f1e6;
+      padding: 22px 56px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-
-    header h1 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      letter-spacing: 0.06em;
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.6rem; font-weight: 500; letter-spacing: -0.01em;
     }
-
-    header h1 span { color: #aaa; font-size: 0.85rem; margin-left: 16px; }
-
+    .brand .sub {
+      font-family: var(--sans);
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #b8b1a2; margin-left: 18px;
+    }
     .run-btn {
-      background: var(--white);
-      color: var(--black);
-      border: none;
-      padding: 10px 24px;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      border-radius: var(--radius);
-      transition: opacity 0.15s;
+      background: #f6f1e6; color: var(--ink); border: 0;
+      padding: 9px 20px; font-family: var(--sans);
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      cursor: pointer; border-radius: 999px;
+      transition: transform 0.1s, opacity 0.15s;
     }
-    .run-btn:hover { opacity: 0.8; }
-    .run-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .run-btn:hover { opacity: 0.85; }
+    .run-btn:active { transform: scale(0.97); }
+    .run-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
     .meta-bar {
-      background: #1a1a1a;
-      color: #888;
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      padding: 8px 48px;
+      background: #1c2025; color: #8a8b8c;
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.08em; padding: 9px 56px;
+      text-transform: uppercase;
     }
 
-    main { max-width: 1280px; margin: 0 auto; padding: 36px 48px 80px; }
+    main { max-width: 1180px; margin: 0 auto; padding: 48px 56px 80px; }
+
+    .intro { margin-bottom: 40px; max-width: 720px; }
+    .intro h2 {
+      font-family: var(--serif);
+      font-weight: 500; font-size: 2rem;
+      letter-spacing: -0.01em; line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .intro p { color: var(--ink-mute); font-size: 0.95rem; line-height: 1.6; }
 
     .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 40px;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px; margin-bottom: 56px;
     }
-
     .stat-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      border-left: 4px solid;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      background: var(--card); border-radius: var(--radius-lg);
+      padding: 22px 26px; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
     }
-    .stat-card.tier1 { border-color: var(--red); }
-    .stat-card.tier2 { border-color: var(--amber); }
-    .stat-card.watch { border-color: var(--green); }
-    .stat-card .number { font-size: 2.4rem; font-weight: bold; }
-    .stat-card .label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--mid); margin-top: 4px; }
+    .stat-card .label {
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .stat-card .number {
+      font-family: var(--serif);
+      font-size: 3rem; font-weight: 500;
+      letter-spacing: -0.02em; line-height: 1;
+      margin-top: 12px; color: var(--ink);
+    }
+    .stat-card .footer { margin-top: 8px; font-size: 0.78rem; color: var(--ink-mute); }
+    .stat-card.tier1 { border-left: 3px solid var(--accent); }
+    .stat-card.tier2 { border-left: 3px solid var(--warm); }
+    .stat-card.watch { border-left: 3px solid var(--cool); }
 
     .section-title {
-      font-size: 1rem;
-      font-family: var(--mono);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin: 32px 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--light);
+      display: flex; align-items: baseline; gap: 14px;
+      margin: 40px 0 18px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
     }
+    .section-title h3 {
+      font-family: var(--serif);
+      font-size: 1.45rem; font-weight: 500;
+      letter-spacing: -0.01em; color: var(--ink);
+    }
+    .section-title .count {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .section-title .dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      display: inline-block; margin-right: 4px;
+    }
+    .section-title .dot.tier1 { background: var(--accent); }
+    .section-title .dot.tier2 { background: var(--warm); }
+    .section-title .dot.watch { background: var(--cool); }
 
     .lead-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      border-left: 4px solid;
-      transition: box-shadow 0.15s;
+      background: var(--card); border-radius: var(--radius-lg);
+      padding: 28px 32px; margin-bottom: 16px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+      transition: box-shadow 0.18s, transform 0.18s;
     }
-    .lead-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-    .lead-card.tier1 { border-color: var(--red); }
-    .lead-card.tier2 { border-color: var(--amber); }
-    .lead-card.watch  { border-color: var(--green); }
+    .lead-card:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
 
-    .lead-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 12px;
+    .lead-top {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 24px; align-items: start; margin-bottom: 18px;
     }
-
-    .company-name { font-size: 1.25rem; font-weight: bold; }
-
-    .score-pill {
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      font-weight: bold;
-      padding: 4px 12px;
-      border-radius: 20px;
-      color: white;
+    .lead-id .company {
+      font-family: var(--serif);
+      font-size: 1.55rem; font-weight: 500;
+      letter-spacing: -0.01em; line-height: 1.15;
+      color: var(--ink); margin-bottom: 6px;
     }
-    .score-pill.tier1 { background: var(--red); }
-    .score-pill.tier2 { background: var(--amber); }
-    .score-pill.watch  { background: var(--green); }
+    .lead-id .industry { font-size: 0.82rem; color: var(--ink-mute); font-weight: 500; }
 
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px 16px;
-      margin-bottom: 14px;
-      font-size: 0.82rem;
+    .score-badge { text-align: center; min-width: 84px; }
+    .score-badge .num {
+      font-family: var(--serif);
+      font-size: 2.4rem; font-weight: 600;
+      letter-spacing: -0.02em; line-height: 1; color: var(--ink);
     }
-    .meta-grid .field { color: var(--mid); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; }
-    .meta-grid .value { font-weight: normal; }
+    .score-badge .scale {
+      font-size: 0.7rem; color: var(--ink-mute); font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;
+    }
+    .score-badge .tier-pill {
+      display: inline-block; margin-top: 8px;
+      padding: 3px 10px; border-radius: 999px;
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .score-badge .tier-pill.tier1 { background: rgba(45,90,61,0.1); color: var(--accent); }
+    .score-badge .tier-pill.tier2 { background: rgba(184,115,42,0.1); color: var(--warm); }
+    .score-badge .tier-pill.watch { background: rgba(138,135,128,0.12); color: var(--cool); }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px 28px; margin-bottom: 22px;
+      padding: 14px 0;
+      border-top: 1px dashed var(--line);
+      border-bottom: 1px dashed var(--line);
+    }
+    .fact .k {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-mute); margin-bottom: 3px;
+    }
+    .fact .v { font-size: 0.92rem; font-weight: 500; color: var(--ink); }
 
     .why-now {
-      background: var(--cream);
-      border-radius: 4px;
-      padding: 10px 14px;
-      font-size: 0.82rem;
-      line-height: 1.6;
-      margin-bottom: 12px;
-      border-left: 2px solid var(--light);
+      background: var(--line-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 16px 20px; margin-bottom: 22px;
     }
-    .why-now strong { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; color: var(--mid); display: block; margin-bottom: 4px; }
+    .why-now .head {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .why-now .body { font-size: 0.95rem; line-height: 1.55; color: var(--ink-2); }
+    .lead-card.tier2 .why-now { border-left-color: var(--warm); }
+    .lead-card.tier2 .why-now .head { color: var(--warm); }
+    .lead-card.watch .why-now { border-left-color: var(--cool); }
+    .lead-card.watch .why-now .head { color: var(--cool); }
 
-    .score-bar-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+    .persona {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 18px; font-size: 0.92rem;
+    }
+    .persona .k {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .persona .v { font-weight: 500; color: var(--ink); }
+
+    .breakdown { margin-bottom: 18px; }
+    .breakdown .head {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-mute); margin-bottom: 10px;
+    }
+    .bar-row {
+      display: grid; grid-template-columns: 140px 1fr 50px;
+      gap: 12px; align-items: center;
+      margin-bottom: 6px; font-size: 0.8rem;
+    }
+    .bar-row .name { color: var(--ink-2); font-weight: 500; }
+    .bar-row .bar { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+    .bar-row .bar .fill { height: 100%; background: var(--ink); border-radius: 99px; }
+    .lead-card.tier1 .bar-row .bar .fill { background: var(--accent); }
+    .lead-card.tier2 .bar-row .bar .fill { background: var(--warm); }
+    .lead-card.watch .bar-row .bar .fill { background: var(--cool); }
+    .bar-row .value {
+      font-variant-numeric: tabular-nums;
+      color: var(--ink-mute); text-align: right; font-weight: 500;
     }
 
-    .score-segment {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.05em;
-      color: var(--mid);
+    .articles { border-top: 1px solid var(--line); padding-top: 16px; }
+    .articles .head {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-mute); margin-bottom: 10px;
+    }
+    .articles .item { font-size: 0.88rem; margin-bottom: 6px; line-height: 1.5; }
+    .articles a {
+      color: var(--ink); text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      transition: border-color 0.15s;
+    }
+    .articles a:hover { border-color: var(--ink); }
+    .articles .src { color: var(--ink-mute); font-size: 0.78rem; margin-left: 4px; }
+
+    .partnerships { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+    .partnerships .tag {
+      background: var(--line-soft); color: var(--ink-2);
+      padding: 3px 10px; border-radius: 999px;
+      font-size: 0.72rem; font-weight: 500;
     }
 
-    .articles {
-      margin-top: 10px;
-      font-size: 0.78rem;
+    #status-msg {
+      font-size: 0.78rem; font-weight: 500; color: var(--ink-2);
+      padding: 9px 56px; background: #efe9d8;
+      border-bottom: 1px solid var(--line); display: none;
     }
-    .articles a { color: var(--black); text-decoration: underline; }
-    .articles .art-meta { color: var(--mid); font-family: var(--mono); font-size: 0.68rem; }
+    .empty { color: var(--ink-mute); font-style: italic; padding: 40px 0; text-align: center; }
 
-    .empty { color: var(--mid); font-style: italic; padding: 20px 0; }
-
-    #status-msg { font-family: var(--mono); font-size: 0.75rem; color: #888; padding: 8px 48px; background: #f0ebe0; display: none; }
+    @media (max-width: 760px) {
+      .topbar, main, .meta-bar { padding-left: 22px; padding-right: 22px; }
+      .stats-row { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .lead-top { grid-template-columns: 1fr; }
+      .score-badge { text-align: left; }
+      .bar-row { grid-template-columns: 110px 1fr 40px; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>L&amp;Co <span>Business Development Pipeline</span></h1>
-  <button class="run-btn" id="refreshBtn" onclick="refreshPipeline()">↻ Run Pipeline</button>
-</header>
-<div class="meta-bar" id="metaBar">Loading...</div>
+<div class="topbar">
+  <div class="brand">L&amp;Co<span class="sub">Business Development Pipeline</span></div>
+  <button class="run-btn" id="refreshBtn" onclick="refreshPipeline()">Run Pipeline</button>
+</div>
+<div class="meta-bar" id="metaBar">Loading…</div>
 <div id="status-msg"></div>
+
 <main id="main-content">
-  <p class="empty">Loading pipeline data...</p>
+  <p class="empty">Loading pipeline data…</p>
 </main>
 
 <script>
@@ -204,74 +297,151 @@
     return "watch";
   }
 
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
   function renderLeads(data) {
     const { leads, summary, run_date } = data;
     const dt = new Date(run_date);
+    const dateStr = dt.toLocaleDateString("en-US", {
+      weekday: "long", year: "numeric", month: "long", day: "numeric"
+    });
     document.getElementById("metaBar").textContent =
-      `Last run: ${dt.toUTCString()}  |  Tier 1: ${summary.tier1_count}  Tier 2: ${summary.tier2_count}  Watch: ${summary.watch_count}`;
+      `Week of ${dateStr}  ·  ${summary.tier1_count} Tier 1  ·  ${summary.tier2_count} Tier 2  ·  ${summary.watch_count} Watch`;
 
     const tier1 = leads.filter(l => l.tier === "Tier 1");
     const tier2 = leads.filter(l => l.tier === "Tier 2");
     const watch = leads.filter(l => l.tier === "Watch List");
 
     let html = `
+      <section class="intro">
+        <h2>This week's high-signal targets.</h2>
+        <p>Companies ranked by location, financial fit, partnership propensity, and recent news triggers — scored against L&amp;Co's outreach criteria.</p>
+      </section>
+
       <div class="stats-row">
-        <div class="stat-card tier1"><div class="number">${summary.tier1_count}</div><div class="label">Tier 1 — High Priority Outreach</div></div>
-        <div class="stat-card tier2"><div class="number">${summary.tier2_count}</div><div class="label">Tier 2 — Active Pipeline</div></div>
-        <div class="stat-card watch"><div class="number">${summary.watch_count}</div><div class="label">Watch List</div></div>
+        <div class="stat-card tier1">
+          <div class="label">Tier 1 · High Priority</div>
+          <div class="number">${summary.tier1_count}</div>
+          <div class="footer">Score &gt; 80 — actionable this week</div>
+        </div>
+        <div class="stat-card tier2">
+          <div class="label">Tier 2 · Active Pipeline</div>
+          <div class="number">${summary.tier2_count}</div>
+          <div class="footer">Score 60–79 — nurture and watch</div>
+        </div>
+        <div class="stat-card watch">
+          <div class="label">Watch List</div>
+          <div class="number">${summary.watch_count}</div>
+          <div class="footer">Score 40–59 — signal pending</div>
+        </div>
       </div>
     `;
 
+    function barRow(name, val, max) {
+      const pct = Math.min(100, (val / max) * 100);
+      return `<div class="bar-row">
+        <span class="name">${name}</span>
+        <span class="bar"><span class="fill" style="width:${pct}%"></span></span>
+        <span class="value">${val}/${max}</span>
+      </div>`;
+    }
+
+    function renderCard(l, cls) {
+      const b = l.score_breakdown;
+      const partners = (l.known_partnerships || []).slice(0, 4)
+        .map(p => `<span class="tag">${escapeHTML(p)}</span>`).join("");
+
+      const arts = (l.triggering_articles || []).slice(0, 3).map(a => {
+        const d = a.published
+          ? new Date(a.published).toLocaleDateString("en-US",{month:"short",day:"numeric"})
+          : "";
+        const safeUrl = escapeHTML(a.url || "#");
+        const safeTitle = escapeHTML(a.title || "");
+        return `<div class="item">
+          <a href="${safeUrl}" target="_blank" rel="noopener">${safeTitle}</a>
+          <span class="src">— ${escapeHTML(a.source || "")}${d ? ", "+d : ""}</span>
+        </div>`;
+      }).join("");
+
+      return `
+        <article class="lead-card ${cls}">
+          <div class="lead-top">
+            <div class="lead-id">
+              <div class="company">${escapeHTML(l.company)}</div>
+              <div class="industry">${escapeHTML(l.industry)}</div>
+            </div>
+            <div class="score-badge">
+              <div class="num">${Math.round(l.score)}</div>
+              <div class="scale">/ 100</div>
+              <div class="tier-pill ${cls}">${escapeHTML(l.tier)}</div>
+            </div>
+          </div>
+
+          <div class="facts">
+            <div class="fact"><div class="k">HQ</div><div class="v">${escapeHTML(l.hq)}</div></div>
+            <div class="fact"><div class="k">Annual Revenue</div><div class="v">${escapeHTML(l.revenue)}</div></div>
+            <div class="fact"><div class="k">Industry</div><div class="v">${escapeHTML(l.industry)}</div></div>
+          </div>
+
+          <div class="why-now">
+            <div class="head">Why Now · Signal</div>
+            <div class="body">${escapeHTML(l.why_now)}</div>
+          </div>
+
+          <div class="persona">
+            <span class="k">Target Persona</span>
+            <span class="v">${escapeHTML(l.target_persona)}</span>
+          </div>
+
+          <div class="breakdown">
+            <div class="head">Score Breakdown</div>
+            ${barRow("Location", b.location, 25)}
+            ${barRow("Financial Fit", b.financial_fit, 25)}
+            ${barRow("Partnership Signal", b.partnership_signal, 30)}
+            ${barRow("Recency Trigger", b.recency_trigger, 20)}
+          </div>
+
+          ${partners ? `<div class="breakdown">
+            <div class="head">Known Partnerships</div>
+            <div class="partnerships">${partners}</div>
+          </div>` : ""}
+
+          ${arts ? `<div class="articles">
+            <div class="head">This Week's Triggering Coverage</div>
+            ${arts}
+          </div>` : ""}
+        </article>
+      `;
+    }
+
     function renderSection(title, tierLeads, cls) {
       if (!tierLeads.length) return "";
-      let s = `<div class="section-title">${title}</div>`;
-      for (const l of tierLeads) {
-        const b = l.score_breakdown;
-        const arts = (l.triggering_articles || []).slice(0, 2)
-          .map(a => {
-            const d = a.published ? new Date(a.published).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "";
-            return `<div><a href="${a.url}" target="_blank" rel="noopener">${a.title.slice(0,90)}</a> <span class="art-meta">— ${a.source}${d ? ", "+d : ""}</span></div>`;
-          }).join("");
-        s += `
-          <div class="lead-card ${cls}">
-            <div class="lead-header">
-              <span class="company-name">${l.company}</span>
-              <span class="score-pill ${cls}">${Math.round(l.score)} / 100</span>
-            </div>
-            <div class="meta-grid">
-              <div><div class="field">HQ LOCATION</div><div class="value">${l.hq}</div></div>
-              <div><div class="field">ANNUAL REVENUE</div><div class="value">${l.revenue}</div></div>
-              <div><div class="field">INDUSTRY</div><div class="value">${l.industry}</div></div>
-              <div style="grid-column:span 2"><div class="field">TARGET PERSONA</div><div class="value">${l.target_persona}</div></div>
-              <div><div class="field">TIER</div><div class="value">${l.tier}</div></div>
-            </div>
-            <div class="why-now"><strong>WHY NOW — SIGNAL</strong>${l.why_now}</div>
-            <div class="score-bar-row">
-              <span class="score-segment">Location ${b.location}/25</span>
-              <span class="score-segment">·</span>
-              <span class="score-segment">Financial ${b.financial_fit}/25</span>
-              <span class="score-segment">·</span>
-              <span class="score-segment">Partnership ${b.partnership_signal}/30</span>
-              <span class="score-segment">·</span>
-              <span class="score-segment">Recency ${b.recency_trigger}/20</span>
-            </div>
-            ${arts ? `<div class="articles" style="margin-top:12px">${arts}</div>` : ""}
-          </div>`;
-      }
+      const titleMap = {
+        tier1: "Tier 1 — High-Priority Outreach",
+        tier2: "Tier 2 — Active Pipeline",
+        watch: "Watch List"
+      };
+      let s = `<div class="section-title">
+        <span class="dot ${cls}"></span>
+        <h3>${titleMap[cls]}</h3>
+        <span class="count">${tierLeads.length} ${tierLeads.length === 1 ? "company" : "companies"}</span>
+      </div>`;
+      for (const l of tierLeads) s += renderCard(l, cls);
       return s;
     }
 
-    html += renderSection("🔴 Tier 1 — High-Priority Outreach (Score > 80)", tier1, "tier1");
-    html += renderSection("🟡 Tier 2 — Active Pipeline (Score 60–80)", tier2, "tier2");
-    html += renderSection("🟢 Watch List (Score 40–60)", watch, "watch");
+    html += renderSection("Tier 1", tier1, "tier1");
+    html += renderSection("Tier 2", tier2, "tier2");
+    html += renderSection("Watch List", watch, "watch");
 
     document.getElementById("main-content").innerHTML = html;
   }
 
   function showStatus(msg) {
     const el = document.getElementById("status-msg");
-    el.style.display = "block";
-    el.textContent = msg;
+    el.style.display = "block"; el.textContent = msg;
   }
   function hideStatus() {
     document.getElementById("status-msg").style.display = "none";
@@ -287,7 +457,7 @@
       if (data.error) { showStatus("Error: " + data.error); return; }
       renderLeads(data);
       hideStatus();
-    } catch(e) {
+    } catch (e) {
       showStatus("Request failed: " + e.message);
     } finally {
       btn.disabled = false;
@@ -299,8 +469,9 @@
       const res = await fetch("/api/leads");
       const data = await res.json();
       renderLeads(data);
-    } catch(e) {
-      document.getElementById("main-content").innerHTML = `<p class="empty">Failed to load data. Click "Run Pipeline" to start.</p>`;
+    } catch (e) {
+      document.getElementById("main-content").innerHTML =
+        '<p class="empty">Failed to load data. Click "Run Pipeline" to start.</p>';
     }
   }
 

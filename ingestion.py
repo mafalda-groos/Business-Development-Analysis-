@@ -69,22 +69,49 @@ class LeadCandidate:
 
 MOCK_COMPANIES: list[CompanyProfile] = [
     CompanyProfile(
-        name="Target Corporation",
-        hq_city="Minneapolis", hq_state="MN", hq_country="USA",
-        annual_revenue_millions=109000,
-        industry="Retail",
-        description="Mass-market retail chain with a long track record of high-profile designer LTO collaborations.",
-        known_partnerships=["Missoni", "Lilly Pulitzer", "Alexander McQueen", "Hunter", "Marimekko"],
-        website="https://www.target.com", stock_ticker="TGT"
+        name="Crocs",
+        hq_city="Broomfield", hq_state="CO", hq_country="USA",
+        annual_revenue_millions=4100,
+        industry="Footwear / Lifestyle",
+        description="Viral footwear brand with one of the most aggressive cultural collaboration programs in retail.",
+        known_partnerships=["Balenciaga", "MSCHF", "KFC", "Post Malone", "Salehe Bembury"],
+        website="https://www.crocs.com", stock_ticker="CROX"
     ),
     CompanyProfile(
-        name="Spotify",
-        hq_city="Stockholm", hq_state="", hq_country="Sweden",
-        annual_revenue_millions=14000,
-        industry="Music Streaming / Tech",
-        description="Global audio streaming platform with deep cultural and artist partnership programs.",
-        known_partnerships=["Coca-Cola", "Starbucks", "various artist merch drops"],
-        website="https://www.spotify.com", stock_ticker="SPOT"
+        name="Yeti",
+        hq_city="Austin", hq_state="TX", hq_country="USA",
+        annual_revenue_millions=1700,
+        industry="Outdoor / Lifestyle",
+        description="Premium drinkware and outdoor brand with a fast-growing artist and ambassador collaboration program.",
+        known_partnerships=["various artist series", "BUILT FORD TOUGH", "Patagonia"],
+        website="https://www.yeti.com", stock_ticker="YETI"
+    ),
+    CompanyProfile(
+        name="Carhartt",
+        hq_city="Dearborn", hq_state="MI", hq_country="USA",
+        annual_revenue_millions=1100,
+        industry="Workwear / Fashion",
+        description="Iconic workwear brand with significant fashion crossover and a long history of streetwear collaborations.",
+        known_partnerships=["A.P.C.", "Junya Watanabe", "Awake NY", "Brain Dead"],
+        website="https://www.carhartt.com"
+    ),
+    CompanyProfile(
+        name="DICK'S Sporting Goods",
+        hq_city="Coraopolis", hq_state="PA", hq_country="USA",
+        annual_revenue_millions=13000,
+        industry="Sporting Goods Retail",
+        description="Largest US sporting goods retailer pursuing brand elevation through lifestyle and exclusive product partnerships.",
+        known_partnerships=["various exclusive footwear drops", "Nike", "Jordan Brand"],
+        website="https://www.dickssportinggoods.com", stock_ticker="DKS"
+    ),
+    CompanyProfile(
+        name="Wendy's",
+        hq_city="Dublin", hq_state="OH", hq_country="USA",
+        annual_revenue_millions=2200,
+        industry="Food & Beverage / QSR",
+        description="Fast food brand celebrated for cultural marketing wit, growing into product and media collaborations.",
+        known_partnerships=["Postmates", "various gaming and meme collaborations"],
+        website="https://www.wendys.com", stock_ticker="WEN"
     ),
     CompanyProfile(
         name="REI Co-op",
@@ -114,15 +141,6 @@ MOCK_COMPANIES: list[CompanyProfile] = [
         website="https://www.generalmills.com", stock_ticker="GIS"
     ),
     CompanyProfile(
-        name="Cargill",
-        hq_city="Minneapolis", hq_state="MN", hq_country="USA",
-        annual_revenue_millions=165000,
-        industry="Agriculture / Food Processing",
-        description="Privately held global food corporation expanding B2C brand presence and sustainability storytelling.",
-        known_partnerships=[],
-        website="https://www.cargill.com"
-    ),
-    CompanyProfile(
         name="Best Buy",
         hq_city="Richfield", hq_state="MN", hq_country="USA",
         annual_revenue_millions=43500,
@@ -130,15 +148,6 @@ MOCK_COMPANIES: list[CompanyProfile] = [
         description="Electronics retailer pursuing lifestyle brand repositioning and younger-demographic partnerships.",
         known_partnerships=["Apple", "Samsung", "various exclusive drops"],
         website="https://www.bestbuy.com", stock_ticker="BBY"
-    ),
-    CompanyProfile(
-        name="Nordstrom",
-        hq_city="Seattle", hq_state="WA", hq_country="USA",
-        annual_revenue_millions=14800,
-        industry="Fashion Retail",
-        description="Premium department store chain with a dedicated designer collaboration and capsule-collection program.",
-        known_partnerships=["Opening Ceremony", "Madewell", "various designer LTOs"],
-        website="https://www.nordstrom.com", stock_ticker="JWN"
     ),
     CompanyProfile(
         name="Starbucks",
@@ -213,15 +222,6 @@ MOCK_COMPANIES: list[CompanyProfile] = [
         website="https://www.alaskaair.com", stock_ticker="ALK"
     ),
     CompanyProfile(
-        name="Camping World",
-        hq_city="Lincolnshire", hq_state="IL", hq_country="USA",
-        annual_revenue_millions=7200,
-        industry="Outdoor / RV Retail",
-        description="National outdoor and RV retailer building lifestyle brand with growing collaboration interest.",
-        known_partnerships=[],
-        website="https://www.campingworld.com", stock_ticker="CWH"
-    ),
-    CompanyProfile(
         name="H-E-B Grocery",
         hq_city="San Antonio", hq_state="TX", hq_country="USA",
         annual_revenue_millions=38000,
@@ -260,20 +260,51 @@ def _days_ago(n: int) -> datetime:
     return datetime.now(timezone.utc) - timedelta(days=n)
 
 
+def _news_search(query: str) -> str:
+    """Return a Google News search URL for a given headline / query."""
+    import urllib.parse
+    return "https://news.google.com/search?q=" + urllib.parse.quote(query)
+
+
 MOCK_NEWS_ARTICLES: list[dict] = [
     {
-        "company_name": "Target Corporation",
-        "title": "Target Names New Chief Brand Officer, Eyes Expanded LTO Design Partnerships",
+        "company_name": "Crocs",
+        "title": "Crocs Names New VP of Brand Collaboration, Plans Expanded Designer Capsule Pipeline",
         "summary": (
-            "Target Corporation announced today the appointment of a new Chief Brand Officer "
-            "poached from Nike's cultural marketing division. The executive is expected to "
-            "double down on the retailer's acclaimed LTO design collaboration program, with "
-            "sources indicating a capsule collection with an undisclosed European fashion house "
-            "is already in negotiation."
+            "Crocs has appointed a new VP of Brand Collaboration tasked with scaling its "
+            "designer and artist capsule collection pipeline. The footwear brand, fresh off "
+            "viral collaborations with Balenciaga and MSCHF, is reportedly in early talks "
+            "with multiple fashion houses for FY26 limited-edition drops."
         ),
-        "url": "https://example-news.com/target-cbo-appointment",
+        "url": _news_search("Crocs VP Brand Collaboration capsule collection"),
+        "published": _days_ago(1),
+        "source": "Footwear News",
+    },
+    {
+        "company_name": "Yeti",
+        "title": "Yeti Hires CMO from Patagonia, Plans Push into Cultural Brand Partnerships",
+        "summary": (
+            "Yeti announced today that it has hired a new Chief Marketing Officer from "
+            "Patagonia's brand division. Sources say the appointment signals Yeti's intent "
+            "to expand from product-driven marketing into broader cultural and artist "
+            "partnership programs, including a planned 2026 limited-edition artist series."
+        ),
+        "url": _news_search("Yeti CMO Patagonia cultural partnerships"),
         "published": _days_ago(2),
-        "source": "Retail Dive",
+        "source": "Ad Age",
+    },
+    {
+        "company_name": "Wendy's",
+        "title": "Wendy's Launches 'Wendy's x Culture' — Multi-Year Collaboration and Pop-Up Program",
+        "summary": (
+            "Wendy's unveiled 'Wendy's x Culture,' a multi-year program of limited-edition "
+            "menu items, merch capsules, and experiential pop-ups co-created with musicians, "
+            "designers, and gaming brands. The CMO described the initiative as Wendy's bid "
+            "to evolve from a fast food chain into a 'cultural lifestyle brand.'"
+        ),
+        "url": _news_search("Wendys cultural collaboration program pop-up"),
+        "published": _days_ago(3),
+        "source": "Fast Company",
     },
     {
         "company_name": "Starbucks",
@@ -284,22 +315,22 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "and limited-edition seasonal collaborations to drive foot traffic among Gen Z customers. "
             "Marketing spend is projected to increase 15% in the back half of fiscal year."
         ),
-        "url": "https://example-news.com/starbucks-q2-cultural-partnerships",
+        "url": _news_search("Starbucks Q2 earnings cultural partnerships"),
         "published": _days_ago(3),
         "source": "Bloomberg",
     },
     {
-        "company_name": "Nordstrom",
-        "title": "Nordstrom Hires VP of Brand Collaboration from LVMH's North America Division",
+        "company_name": "Carhartt",
+        "title": "Carhartt Names Head of Brand Partnerships, Doubles Down on Fashion Crossover",
         "summary": (
-            "Nordstrom announced it has hired a seasoned executive from LVMH as its new "
-            "VP of Brand Collaboration, a newly created role. The move signals the department "
-            "store's intent to accelerate its designer capsule collection and exclusive drop "
-            "programs as it competes for premium shoppers."
+            "Carhartt has named a new Head of Brand Partnerships to lead an expanded "
+            "collaboration roadmap with fashion houses and emerging streetwear labels. "
+            "The workwear icon reported strong growth in its fashion-adjacent lines and "
+            "is investing in a dedicated co-creation studio in Detroit."
         ),
-        "url": "https://example-news.com/nordstrom-vp-brand-collab",
-        "published": _days_ago(1),
-        "source": "WWD",
+        "url": _news_search("Carhartt brand partnerships fashion collaboration"),
+        "published": _days_ago(4),
+        "source": "Hypebeast",
     },
     {
         "company_name": "General Mills",
@@ -310,7 +341,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "Lucky Charms. The CPG giant said the LTO program is central to its strategy of "
             "reaching younger consumers through cultural relevance."
         ),
-        "url": "https://example-news.com/general-mills-taste-the-art",
+        "url": _news_search("General Mills Taste the Art designer packaging LTO"),
         "published": _days_ago(5),
         "source": "Ad Age",
     },
@@ -322,7 +353,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "reporting directly to the CMO. The hire is intended to accelerate REI's co-branding "
             "and capsule-collection activity with emerging outdoor and lifestyle brands."
         ),
-        "url": "https://example-news.com/rei-head-creative-partnerships",
+        "url": _news_search("REI Head of Creative Partnerships co-branding"),
         "published": _days_ago(4),
         "source": "Outdoor Retailer News",
     },
@@ -335,7 +366,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "amenity kits, apparel, and experiential pop-ups. Delta's CMO stated the program "
             "positions Delta as a 'cultural brand, not just an airline.'"
         ),
-        "url": "https://example-news.com/delta-x-design-launch",
+        "url": _news_search("Delta x Design brand collaboration program"),
         "published": _days_ago(6),
         "source": "Fast Company",
     },
@@ -348,7 +379,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "plans to launch a series of exclusive artist collaborations and limited-edition "
             "private-label design collections starting in Q3."
         ),
-        "url": "https://example-news.com/heb-record-revenue-lifestyle",
+        "url": _news_search("H-E-B record revenue lifestyle brand strategy"),
         "published": _days_ago(3),
         "source": "Austin American-Statesman",
     },
@@ -360,7 +391,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "as part of its plan to deepen artist and cultural brand partnerships globally. "
             "The executive previously led Nike's 'NikeWomen' collaboration series."
         ),
-        "url": "https://example-news.com/lululemon-vp-cultural-marketing",
+        "url": _news_search("Lululemon VP Cultural Marketing collaboration"),
         "published": _days_ago(2),
         "source": "Retail Brew",
     },
@@ -373,7 +404,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "packaging runs. The grocery chain is actively seeking creative agency partners to execute "
             "the program."
         ),
-        "url": "https://example-news.com/kroger-investor-day-premium-private-label",
+        "url": _news_search("Kroger Investor Day premium private label designer collaboration"),
         "published": _days_ago(7),
         "source": "Grocery Dive",
     },
@@ -385,7 +416,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "luxury goods and co-branded lifestyle campaigns. The appointment suggests 3M is "
             "exploring design-forward brand partnerships to modernize its Post-it and Scotch brands."
         ),
-        "url": "https://example-news.com/3m-cmo-luxury-background",
+        "url": _news_search("3M Consumer Products CMO luxury brand"),
         "published": _days_ago(5),
         "source": "Marketing Week",
     },
@@ -398,7 +429,7 @@ MOCK_NEWS_ARTICLES: list[dict] = [
             "exclusive artist collaborations and limited-edition merchandise programs targeted "
             "at millennial rural homeowners."
         ),
-        "url": "https://example-news.com/tractor-supply-rural-lifestyle-brand",
+        "url": _news_search("Tractor Supply rural lifestyle brand collaboration"),
         "published": _days_ago(4),
         "source": "CNBC",
     },
